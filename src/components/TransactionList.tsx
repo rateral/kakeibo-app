@@ -17,6 +17,7 @@ export default function TransactionList({ transactions, onDelete, loading = fals
       try {
         await onDelete(id)
       } catch (error) {
+        console.error('削除エラー:', error)
         alert('削除に失敗しました')
       }
     }
